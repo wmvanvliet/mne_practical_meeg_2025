@@ -14,7 +14,7 @@ extra_path = os.path.expanduser(
     "~/Documents/teaching/practical_meeg_2022_data/extra_data_mne")
 
 # set up the dataset identifiers
-datasets = ["sub-%02d" % ii for ii in range(1, 3)]
+datasets = ["sub-%02d" % ii for ii in range(11, 15)  if ii not in [5, 10]]
 
 # set up path to raw data and for saving the evokeds list
 raw_fname_templ = 'derivatives/meg_derivatives/%s/ses-meg/meg/%s_ses-meg_\
@@ -68,9 +68,9 @@ for id in datasets:
 
     # compute SSP
     projs_eog, _ = mne.preprocessing.compute_proj_eog(
-                        raw, n_mag=3, n_grad=3, n_eeg=3, average=True)
+                        raw, n_mag=3, n_grad=3, average=True)
     projs_ecg, _ = mne.preprocessing.compute_proj_ecg(
-                        raw, n_mag=3, n_grad=3, n_eeg=3, average=True)
+                        raw, n_mag=3, n_grad=3, average=True)
 
     # create epochs
     picks = mne.pick_types(raw.info, meg=True, eog=False, ecg=False,
@@ -90,8 +90,8 @@ for id in datasets:
         evokeds_list[k].comment = cond  # update the name of the condition
 
     # check the data by plotting
-    mne.viz.plot_compare_evokeds(evokeds_list, picks='MEG2143')
+    # mne.viz.plot_compare_evokeds(evokeds_list, picks='MEG2143')
 
     # save the data
     evoked_list_fname = os.path.join(extra_path, (evoked_fname_templ % id))
-    mne.write_evokeds(evoked_list_fname, evokeds_list)
+    mne.write_evokeds(evoked_list_fname, evokeds_list, overwrite=True)
