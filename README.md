@@ -22,7 +22,7 @@ Please make sure you do the following steps before the first hands-on session:
 
 ### Start a Jupyter notebook
 
- To start a Jupyter notebook, open your terminal and navigate to the directory where you would like to save this directory of scripts. Then type the command `jupyter notebook` and Jupyter should open in your browser. Click on the notebook you want to run!
+ To start a Jupyter notebook, open your terminal and navigate to the directory where you would saved this directory of scripts. Then type the command `jupyter notebook` and Jupyter should open in your browser. Click on the notebook you want to run!
 
 
 ## Program
