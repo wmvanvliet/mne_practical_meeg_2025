@@ -15,14 +15,14 @@ Please make sure you do the following steps before the first hands-on session:
 0. You will need to download this directory of scripts.
 1. You will need to [download the data](https://doi.org/10.5281/zenodo.7405048).
 2. You will need to [download the extra data](https://drive.google.com/file/d/1EE_pDY-i6zkS5qiysaGw6HiG9yRLL1y1/view?usp=share_link) that we will use in some tutorials.
-3. You will need to have installed MNE-Python on your machine. See instructions at: https://mne.tools/stable/install/index.html
+3. You will need to have MNE-Python installed on your machine. See instructions at: https://mne.tools/stable/install/index.html
 4. To check your installation, please look at the (very short!) notebook [Check your installation](0-Installation_check.ipynb). See below if you need a reminder how to start it.
 5. If you are not familiar with Python, we invite you to take the time to work on these tutorials:
 [Intro to Python](intro_to_python/0a-Intro_Python.ipynb), [Intro to Numpy](intro_to_python/0b-Intro_Numpy.ipynb).
 
 ### Start a Jupyter notebook
 
- To start a Jupyter notebook, open your terminal and navigate to the directory where you would saved this directory of scripts. Then type the command `jupyter notebook` and Jupyter should open in your browser. Click on the notebook you want to run!
+ To start a Jupyter notebook, open your terminal and navigate to the directory where you saved this directory of scripts. Then type the command `jupyter notebook` and Jupyter should open in your internet browser. Click on the notebook you want to run!
 
 
 ## Program
