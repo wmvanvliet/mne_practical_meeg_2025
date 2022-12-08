@@ -14,7 +14,7 @@ Please make sure you do the following steps before the first hands-on session:
 
 1. You will need to [download the data](TODO).
 2. You will need to [download the extra data](TODO) that we will use in later some tutorials.
-3. You will need to have installed MNE-Python on your machine. See instructions at: https://mne.tools/stable/install/mne_python.html
+3. You will need to have installed MNE-Python on your machine. See instructions at: https://mne.tools/stable/install/index.html
 4. If you are not familiar with Python, we invite you to take the time to work on these tutorials:
 [intro Python](intro_to_python/0a-Intro_Python.ipynb), [intro Numpy](intro_to_python/0b-Intro_Numpy.ipynb).
 
