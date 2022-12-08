@@ -13,7 +13,7 @@ Authors of the material:
 Please make sure you do the following steps before the first hands-on session:
 
 1. You will need to [download the data](https://doi.org/10.5281/zenodo.7405048).
-2. You will need to [download the extra data](TODO) that we will use in some tutorials.
+2. You will need to [download the extra data](https://drive.google.com/file/d/1EE_pDY-i6zkS5qiysaGw6HiG9yRLL1y1/view?usp=share_link) that we will use in some tutorials.
 3. You will need to have installed MNE-Python on your machine. See instructions at: https://mne.tools/stable/install/index.html
 4. If you are not familiar with Python, we invite you to take the time to work on these tutorials:
 [intro Python](intro_to_python/0a-Intro_Python.ipynb), [intro Numpy](intro_to_python/0b-Intro_Numpy.ipynb).
