@@ -1,5 +1,9 @@
 # Prepare the group analysis from raw data
 
+# NOTE: If you are an attendee at the workshop, you do NOT need to run this
+# script.
+# Script is logged on Github solely for provenance.
+
 # this script needs the other datasets downloaded via datalad (or another
 # download service for the open neuro dataset)
 
@@ -13,8 +17,8 @@ data_path = os.path.expanduser(
 extra_path = os.path.expanduser(
     "~/Documents/teaching/practical_meeg_2022_data/extra_data_mne")
 
-# set up the dataset identifiers
-datasets = ["sub-%02d" % ii for ii in range(11, 15)  if ii not in [5, 10]]
+# set up the dataset identifiers - #10 has weird triggers
+datasets = ["sub-%02d" % ii for ii in range(1, 17)  if ii not in [10]]
 
 # set up path to raw data and for saving the evokeds list
 raw_fname_templ = 'derivatives/meg_derivatives/%s/ses-meg/meg/%s_ses-meg_\
@@ -30,12 +34,21 @@ for id in datasets:
 
     raw.set_channel_types({'EEG061': 'eog',  # actually EOG not EEG
                            'EEG062': 'eog',  # actually EOG not EEG
-                           'EEG063': 'ecg'  # actually ECG not EEG
+                           'EEG063': 'ecg',  # actually ECG not EEG
+                           'EEG064': 'misc'  # EEG064 free-floating electrode
                          })
+
+    # we also rename the EOG and ECG channels:
+    raw.rename_channels({'EEG061': 'EOG061',
+                        'EEG062': 'EOG062',
+                        'EEG063': 'ECG063'})
+
+    # average reference
+    raw.set_eeg_reference(ref_channels='average', projection=False)
 
     # resample the data and filter
     raw.resample(300)
-    raw.filter(0, 40)
+    raw.filter(None, 40)
 
     # get events before dropping channels
     events = mne.find_events(raw, stim_channel='STI101', verbose=True)
@@ -46,7 +59,7 @@ for id in datasets:
     events = events[events[:, 2] < 20]  # take only events with code < 20
 
     # pick channels
-    raw.pick_types(meg=True, ecg=True, eog=True)
+    raw.pick_types(meg=True, eeg=True, ecg=True, eog=True)
 
     # event IDs
     event_id = {
@@ -61,19 +74,19 @@ for id in datasets:
     'scrambled/long': 19,
     }
 
-    # cut epochs
-    tmin = -0.5  # start of each epoch (500ms before the trigger)
-    tmax = 1.0  # end of each epoch (1000ms after the trigger)
-    baseline = (-0.2, 0)  # means from 200ms before to stim onset (t = 0)
-
     # compute SSP
     projs_eog, _ = mne.preprocessing.compute_proj_eog(
-                        raw, n_mag=3, n_grad=3, average=True)
+                        raw, n_mag=3, n_grad=3, n_eeg=3, average=True)
     projs_ecg, _ = mne.preprocessing.compute_proj_ecg(
-                        raw, n_mag=3, n_grad=3, average=True)
+                        raw, n_mag=3, n_grad=3, n_eeg=3, average=True)
+
+    # parameters for epochs
+    tmin = -0.5  # start of each epoch (500ms before the trigger)
+    tmax = 1.0  # end of each epoch (1000ms after the trigger)
+    baseline = (-0.5, 0)  # means from 200ms before to stim onset (t = 0)
 
     # create epochs
-    picks = mne.pick_types(raw.info, meg=True, eog=False, ecg=False,
+    picks = mne.pick_types(raw.info, eeg=True, meg=True, eog=False, ecg=False,
                            stim=False)
     reject = dict(grad=4000e-13, mag=4e-12)
     epochs = mne.Epochs(raw, events, event_id, tmin, tmax, proj=False,
@@ -86,7 +99,8 @@ for id in datasets:
     conditions = ['famous', 'unfamiliar', 'scrambled']
     evokeds_list = []
     for k, cond in enumerate(conditions):
-        evokeds_list.append(epochs[cond].average().apply_proj().crop(-0.5, 1))
+        # average and apply projections
+        evokeds_list.append(epochs[cond].average().apply_proj())
         evokeds_list[k].comment = cond  # update the name of the condition
 
     # check the data by plotting
