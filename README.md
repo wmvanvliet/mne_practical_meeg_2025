@@ -8,22 +8,24 @@ Authors of the material:
 	- Alexandre Gramfort, Inria, CEA Neurospin
 	- Denis A. Engemann, Inria, CEA Neurospin
 
-You will need to [download data](TODO)
+## Before you arrive
 
-You will need also to have installed MNE-Python on your machine.
-See instructions at: https://mne.tools/stable/install/mne_python.html
+Please make sure you do the following steps before the first hands-on session:
 
-### Schedule
+1. You will need to [download the data](TODO).
+2. You will need to [download the extra data](TODO) that we will use in later some tutorials.
+3. You will need to have installed MNE-Python on your machine. See instructions at: https://mne.tools/stable/install/mne_python.html
+4. If you are not familiar with Python, we invite you to take the time to work on these tutorials:
+[intro Python](intro_to_python/0a-Intro_Python.ipynb), [intro Numpy](intro_to_python/0b-Intro_Numpy.ipynb).
 
-Before you arrive if you do not know any Python I invite you to read these tutorials:
-[intro Python](0a-Intro_Python.ipynb), [intro Numpy](0b-Intro_Numpy.ipynb).
+## Program
 
 #### Day 1 (Wednesday December 14, 2022)
 
  - 08:30 – 09:00 Registration, with coffee/tea + Welcome & intro
- - 09:00 – 09:45 Lecture: Good scientific Practice (Maxime, Anne-Sophie, François) 
+ - 09:00 – 09:45 Lecture: Good scientific Practice (Maxime, Anne-Sophie, François)
  - 09:45 - 10:30 Lecture: Importing, cleaning, and preprocessing data (Johanna)
- - 10:30 – 12:30 Hands-on: [Preprocessing](TODO.ipynb) using MNE-Python
+ - 10:30 – 12:30 Hands-on: [Preprocessing](1-Preprocessing.ipynb) using MNE-Python
 
  - 12:30 – 14:00 Lunch
 
@@ -32,33 +34,33 @@ Before you arrive if you do not know any Python I invite you to read these tutor
 #### Day 2 (Thursday December 15, 2022)
 
  - 09:00 – 09:45 Panel discussion
- - 09:00 – 09:45 Lecture: Time-domain analysis (Robert) 
- - 10:30 – 12:30 Hands-on: [Sensor-level analysis](TODO.ipynb) using MNE-Python
+ - 09:00 – 09:45 Lecture: Time-domain analysis (Robert)
+ - 10:30 – 12:30 Hands-on: [Sensor-level analysis](2-Time_domain_evoked_responses.ipynb) using MNE-Python
 
  - 12:30 – 14:00 Lunch
 
  - 14:00 – 15:3 Lecture: Spectral / Time-frequency analysis (Natalie)
- - 15:30 – 17:30 Hands-on: [Time-frequency analysis](TODO.ipynb) using MNE-Python
+ - 15:30 – 17:30 Hands-on: [Time-frequency analysis](3-Time_frequency_analysis.ipynb) using MNE-Python
  - 17:30 – 18:00 Panel discussion
 
 #### Day 3 (Friday December 16, 2022)
 
  - 09:00 – 10:30 Lecture: Source estimation (Britta)
- - 10:30 – 12:30 Hands-on: [Source estimation](TODO) using MNE-Python
+ - 10:30 – 12:30 Hands-on: [Forward modelling](4-Forward_modelling.ipynb) and [Source estimation](5-Source_reconstruction.ipynb) using MNE-Python
 
  - 12:30 – 14:00 Lunch
 
  - 14:00 – 15:30 Lecture: Group-level analysis (Robert)
- - 15:30 – 17:30 Hands-on: [Group level analysis](TODO) using MNE-Python
+ - 15:30 – 17:30 Hands-on: [Group level analysis](6-Group_analysis.ipynb) using MNE-Python
  - 17:30 – 18:00 Panel discussion
 
 
-### Cite
+### References and credit
 
 The code from this tutorial is heavily inspired from this article:
 
 	Mainak Jas, Eric Larson, Denis Engemann, Jaakko Leppakangas, Samu Taulu, Matti Hamalainen,
-	and Alexandre Gramfort. 2018. A Reproducible MEG/EEG Group Study With the MNE Software: 
+	and Alexandre Gramfort. 2018. A Reproducible MEG/EEG Group Study With the MNE Software:
 	Recommendations, Quality Assessments, and Good Practices.
 	Frontiers in Neuroscience. 12, doi: 10.3389/fnins.2018.00530
 
