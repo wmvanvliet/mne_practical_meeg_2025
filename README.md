@@ -12,8 +12,8 @@ Authors of the material:
 
 Please make sure you do the following steps before the first hands-on session:
 
-1. You will need to [download the data](TODO).
-2. You will need to [download the extra data](TODO) that we will use in later some tutorials.
+1. You will need to [download the data](https://doi.org/10.5281/zenodo.7405048).
+2. You will need to [download the extra data](TODO) that we will use in some tutorials.
 3. You will need to have installed MNE-Python on your machine. See instructions at: https://mne.tools/stable/install/index.html
 4. If you are not familiar with Python, we invite you to take the time to work on these tutorials:
 [intro Python](intro_to_python/0a-Intro_Python.ipynb), [intro Numpy](intro_to_python/0b-Intro_Numpy.ipynb).
@@ -70,11 +70,11 @@ To cite MNE-C or the inverse imaging implementations provided by the MNE softwar
 
 	A. Gramfort, M. Luessi, E. Larson, D. Engemann, D. Strohmeier, C. Brodbeck, L. Parkkonen,
 	M. Hämäläinen, MNE software for processing MEG and EEG data, NeuroImage, Volume 86,
-	1 February 2014, Pages 446-460, ISSN 1053-8119, [DOI]
+	1 February 2014, Pages 446-460, ISSN 1053-8119.
 
 To cite the MNE-Python package, please use:
 
 	A. Gramfort, M. Luessi, E. Larson, D. Engemann, D. Strohmeier, C. Brodbeck, R. Goj, M. Jas,
 	T. Brooks, L. Parkkonen, M. Hämäläinen, MEG and EEG data analysis with MNE-Python,
-	Frontiers in Neuroscience, Volume 7, 2013, ISSN 1662-453X, [DOI]
+	Frontiers in Neuroscience, Volume 7, 2013, ISSN 1662-453X.
 
