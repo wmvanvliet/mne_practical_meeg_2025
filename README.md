@@ -1,9 +1,10 @@
 # Material for the MNE-Python workshop of Practical MEEG 2022
 
-More info on the workshop: [http://practicalmeeg2022.org/](http://practicalmeeg2022.org/)
+More info on the workshop: [https://cuttingeeg.org/practicalmeeg2025](https://cuttingeeg.org/practicalmeeg2025)
 
 Authors of the material:
 
+    - Marijn van Vliet, Aalto University, Department of Neuroscience and Biomedical Engineering
 	- Britta Westner, Radboud University Nijmegen, Donders Institute
 	- Alexandre Gramfort, Inria, CEA Neurospin
 	- Denis A. Engemann, Inria, CEA Neurospin
@@ -27,39 +28,73 @@ Please make sure you do the following steps before the first hands-on session:
 
 ## Program
 
-#### Day 1 (Wednesday December 14, 2022)
+#### Day 0 (Monday October 27, 2025)
+
+ - 14:00 - 15:30 Training cutting instructors
+ - 15:30 - 15:40 Break
+ - 15:40 – 17:30 Advanced training on MNE-Python
+
+ - 17:30 – 18:00 Panel discussion
+
+#### Day 1 (Tuesday October 28, 2025)
 
  - 08:30 – 09:00 Registration, with coffee/tea + Welcome & intro
- - 09:00 – 09:45 Lecture: Good scientific Practice (Maxime, Anne-Sophie, François)
- - 09:45 - 10:30 Lecture: Importing, cleaning, and preprocessing data (Johanna)
- - 10:30 – 12:30 Hands-on: [Preprocessing](1-Preprocessing.ipynb) using MNE-Python
 
- - 12:30 – 14:00 Lunch
+ - 09:00 – 10:00 Lecture: Get to know your data: preprocessing, segmentation and artifacts
+ - 10:00 - 10:10 Break
+ - 10:10 – 12:00 Hands-on: [Preprocessing](1-Preprocessing.ipynb) using MNE-Python
 
- - 14.00 – 18:00 Toolbox Bouquet (online)
+ - 12:00 - 12:30 TrainEErs debriefing
 
-#### Day 2 (Thursday December 15, 2022)
+ - 12:30 – 14:00 Lunch and posters
 
- - 09:00 – 09:45 Panel discussion
- - 09:00 – 09:45 Lecture: Time-domain analysis (Robert)
- - 10:30 – 12:30 Hands-on: [Sensor-level analysis](2-Time_domain_evoked_responses.ipynb) using MNE-Python
+ - 14.00 – 15:30 Tune in to your frequency analysis
+ - 15:30 - 15:40 Break
+ - 15:40 – 17:30 Hands-on: [Sensor-level analysis](2-Time_domain_evoked_responses.ipynb) using MNE-Python
+ - 15:40 – 17:30 Hands-on: [Time-frequency analysis](3-Time_frequency_analysis.ipynb) using MNE-Python
 
- - 12:30 – 14:00 Lunch
+ - 17:00 – 17:30 Panel discussion
+ - 17:30 - 18:00 CuttingGardens 2026
 
- - 14:00 – 15:3 Lecture: Spectral / Time-frequency analysis (Natalie)
- - 15:30 – 17:30 Hands-on: [Time-frequency analysis](3-Time_frequency_analysis.ipynb) using MNE-Python
- - 17:30 – 18:00 Panel discussion
+#### Day 3 (Wednesday October 29, 2025)
 
-#### Day 3 (Friday December 16, 2022)
+ - 09:00 – 10:30 Lecture: Source level analysis I: head and source level model and forward computation (Robert)
+ - 10:30 - 10:40 Break
+ - 10:40 – 12:00 Hands-on: [Forward modelling](4-Forward_modelling.ipynb) using MNE-Python
 
- - 09:00 – 10:30 Lecture: Source estimation (Britta)
- - 10:30 – 12:30 Hands-on: [Forward modelling](4-Forward_modelling.ipynb) and [Source estimation](5-Source_reconstruction.ipynb) using MNE-Python
+ - 12:00 - 12:30 TrainEErs debriefing
 
- - 12:30 – 14:00 Lunch
+ - 12:30 – 14:00 Lunch and posters
 
- - 14:00 – 15:30 Lecture: Group-level analysis (Robert)
- - 15:30 – 17:30 Hands-on: [Group level analysis](6-Group_analysis.ipynb) using MNE-Python
- - 17:30 – 18:00 Panel discussion
+ - 14:00 – 15:30 Lecture: Source level analysis II: getting to source level maps and time-series (Robert)
+ - 15:30 - 15:40 Break
+ - 15:40 - 17:00 Hands-on: [Source estimation](5-Source_reconstruction.ipynb) using MNE-Python
+
+ - 17:00 – 17:30 Panel discussion
+ - 17:30 – 18:00 CuttingStuff
+
+#### Day 4 (Thursday October 30, 2025)
+
+ - 09:00 – 10:30 Lecture: Get and report results with confidence I: univariate approach
+ - 10:30 - 10:40 Break
+ - 10:40 – 12:00 Hands-on: [Group level analysis](6-Group_analysis.ipynb) using MNE-Python
+
+ - 12:00 - 12:30 TrainEErs debriefing
+
+ - 12:30 – 14:00 Lunch and posters
+
+ - 14.00 – 17:00 Toolbox Bouquet (online)
+ - 17.00 – 18:00 AI use in MEG/EEG data analysis
+
+ - 18:00 Social event
+
+#### Day 5 (Friday October 31, 2025)
+
+ - 09:00 – 10:30 Lecture: Get and report results with confidence II: multivariate approach
+ - 10:30 - 10:40 Break
+ - 10:40 – 12:00 Hands-on: [Multivariate analysis](7-Multivariate_analysis.ipynb) using MNE-Python
+
+ - 12:00 - 12:30 TrainEErs debriefing
 
 
 ### References and credit
